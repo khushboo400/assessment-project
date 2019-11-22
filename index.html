@@ -1,0 +1,69 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=yes">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		
+        <title>GITHUB & Countries details</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+            <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+
+    </head>
+    <body>
+       <center> <div class="container-index">
+            <h3 style="color:white">Name Please..</h3>
+            <input id="name" placeholder="Enter your name...">
+            <button id="subname" class="btn btn-success">Submit</button>
+        </div>
+           
+        
+
+<marquee  class="text-center text-capitalize pt-5" width="100%" direction="right" height="100px" style="font-family: cursive; font-size: 100%; color:white"><h3>GITHUB and COUNTRIES DETAILS</h3></marquee>
+
+
+        <h4 class="text-center text-capitalize"></h4>
+        <hr class="w-25 mx-auto pt-5">
+        <div class="container-fluid">
+        <div class="row">
+        <div class="col-2">
+
+            <div class="card" style="width: 18rem;box-align: center; align-items: center; margin-left: 350px">
+                <img src="public/git.jpg" class="card-img-top" >
+                <div class="card-body">
+                    <h5 class="card-title">Github</h5>
+                    <p class="card-text">List of users</p>
+                </div>
+            </div>
+        
+        </div>
+        <div class="col-2 offset-1">
+        <div class="card" style="width: 18rem; margin-left: 350px">
+                <img src="public/world.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Countries</h5>
+                    <p class="card-text">Get Country Details</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+    </center>
+    </body>
+    <script>
+    $(document).on("click","#subname",function(){
+        console.log($('#name').val());
+    if($('#name').val()==""){
+                alert("Please enter your name");
+    }
+    else{
+                localStorage.setItem("Name",JSON.stringify($('#name').val()))
+        location.replace("app.html");
+    }
+    })
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>
